@@ -1,4 +1,16 @@
-
+DO
+$$
+DECLARE
+	valor INT;
+BEGIN
+	valor := fn_valor_aleatorio_entre(1, 10);
+	RAISE NOTICE 'O valor gerado foi %', valor;
+		IF valor <= 20 THEN
+			RAISE NOTICE 'Sim, % é menor ou igual a 20', valor;
+		END IF;
+	END;
+$$
+		
 
 
 --SELECT fn_valor_aleatorio_entre(2, 5);
